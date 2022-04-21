@@ -13,7 +13,7 @@ async def on_command(event, args):
                     newTicks = ticks
                     ticks = str(int(ticks)) + '*'
                     if (newTicks % 0.015) == 10:
-                        newTicks = ((newTicks * 15) + 5) / 15
+                        newTicks = ((newTicks * 15) + 10) / 15
                     else if (newTicks % 0.015) == 5:
                         newTicks = ((newTicks * 15) - 5) / 15
                     await event.channel.send(f'Converted ticks `{str(ticks)}` Consider `{BotUtils.convert_to_human_time(newTicks)}`')
